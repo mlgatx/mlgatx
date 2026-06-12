@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: maoist labor group of austin
 email: your-email@domain.com
 author: GitHub User
 
@@ -55,7 +55,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 
 baseurl: "/blogjekyll" # the subpath of your site, e.g. /blog
-url: "https://m.mlgatx.cloud-ip.cc" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://mlgatx.github.io" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "" # the favicon for your site
 
 # Yat date format
