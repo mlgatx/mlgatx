@@ -29,7 +29,7 @@ email: your-email@domain.com
 author: GitHub User
 
 # theme: owner/name --> Don't forget to remove/comment the gem-based theme option
-remote_theme: "roger/mlgatx"
+remote_theme: "jeffreytse/jekyll-theme-yat"
 
 # Add the following to activate the plugin
 plugins:
