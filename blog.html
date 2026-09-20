@@ -6,7 +6,56 @@
 -->
 
 <html lang="en">
+<style>
+@font-face {
+    font-family: "Bernoru";
+    src: url("assets/fonts/Bernoru-BlackUltraExpanded.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
+#onward-masthead {
+    width: 100vw !important;
+    min-height: 90vh !important;
+    background: #ff0000 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 5vw !important;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#onward-title {
+    margin: 0 !important;
+    color: white !important;
+    font-family: "Bernoru", sans-serif !important;
+    font-weight: 900 !important;
+    font-size: clamp(5rem, 17vw, 20rem) !important;
+    line-height: 0.8 !important;
+    letter-spacing: -0.04em !important;
+    text-align: center !important;
+    white-space: nowrap;
+}
+
+#onward-subtitle {
+    margin: 3rem 0 0 !important;
+    color: white !important;
+    font-family: "Bernoru", sans-serif !important;
+    font-weight: 900 !important;
+    font-size: clamp(2rem, 5vw, 5rem) !important;
+    line-height: 1 !important;
+    text-align: center !important;
+}
+</style>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
