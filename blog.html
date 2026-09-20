@@ -58,6 +58,7 @@
                         </li>
                         <li>
                             <a href="index.html#contact">Contact</a>
+                        </li>
                         <li class="active">
                             <a href="blog.html">ONWARD! Blog</a>
                         </li>
@@ -150,9 +151,7 @@
        
 
 
-<!-- ==========================================
-     FILTER
-     ========================================== -->
+<!-- FILTER -->
 
 <div class="nk-pagination nk-pagination-nobg nk-pagination-center">
     <a href="#nk-toggle-filter">
@@ -161,21 +160,16 @@
 </div>
 
 <ul class="nk-isotope-filter" id="blog-filter">
-    <li class="active" data-filter="*">All</li>
-    <li data-filter=".theoretical">Theoretical</li>
-    <li data-filter=".polemical">Polemical</li>
-    <li data-filter=".historical">Historical</li>
+    <li class="active" data-filter="all">All</li>
+    <li data-filter="theoretical">Theoretical</li>
+    <li data-filter="polemical">Polemical</li>
+    <li data-filter="historical">Historical</li>
 </ul>
 
 
-<!-- ==========================================
-     BLOG GRID
-     ========================================== -->
+<!-- BLOG GRID -->
 
-<div class="my-blog-grid">
-
-
-    <!-- POST 1 -->
+<div class="my-blog-grid" id="blog-grid">
 
     <article class="my-blog-card polemical">
 
@@ -213,13 +207,11 @@
     </article>
 
 
-    <!-- POST 2 -->
-
     <article class="my-blog-card theoretical">
 
         <a href="blog-5.html" class="my-blog-image">
             <img src="assets/images/blog-5.jpg"
-                 alt="No Country for Old Men: How “Veterans” of the Maoist Movement Hold it Back">
+                 alt="No Country for Old Men">
         </a>
 
         <div class="my-blog-content">
@@ -239,7 +231,7 @@
             </div>
 
             <p class="my-blog-summary">
-                Recently, as I was preparing a follow up to my initial polemic against rationalism, Long March Journal, a publication harboring comrades “with many years of work in the movement,” published a short but telling article entitled “Notes from a Recent Exchange,” which sought to “correct the record” in relation to the arguments put forward in my previous article, “On the Struggle for Unity within the American Maoist Movement.”
+                Recently, as I was preparing a follow up to my initial polemic against rationalism, Long March Journal, a publication harboring comrades “with many years of work in the movement,” published a short but telling article entitled “Notes from a Recent Exchange.”
             </p>
 
             <a href="blog-5.html" class="my-blog-read-more">
@@ -251,13 +243,11 @@
     </article>
 
 
-    <!-- POST 3 -->
-
     <article class="my-blog-card theoretical">
 
         <a href="blog-1.html" class="my-blog-image">
             <img src="assets/images/blog-1.jpg"
-                 alt="Proposal for the Principles of Unity of an Organized Maoist Party-Building Network">
+                 alt="Proposal for the Principles of Unity">
         </a>
 
         <div class="my-blog-content">
@@ -277,7 +267,7 @@
             </div>
 
             <p class="my-blog-summary">
-                Second part to "On the Struggle for Unity...". So, with all of that being said, what is there do? Are we to then simply unite with those merely on their words? No. We seek to build an organized network which stands firmly on Maoism and on definite party-building principles.
+                Second part to "On the Struggle for Unity...".
             </p>
 
             <a href="blog-1.html" class="my-blog-read-more">
@@ -289,13 +279,11 @@
     </article>
 
 
-    <!-- POST 4 -->
-
     <article class="my-blog-card theoretical">
 
         <a href="blog-2.html" class="my-blog-image">
             <img src="assets/images/blog-2.jpg"
-                 alt="On the Struggle for Unity within the American Maoist Movement">
+                 alt="On the Struggle for Unity">
         </a>
 
         <div class="my-blog-content">
@@ -315,7 +303,7 @@
             </div>
 
             <p class="my-blog-summary">
-                It is not controversial to say that the US Maoist movement is divided and has been for the majority of its existence. Attempts to unify a large enough section on definite principles of Marxism, correct revolutionary theory and strategy, have all famously collapsed, each rendition worse than the last.
+                It is not controversial to say that the US Maoist movement is divided and has been for the majority of its existence.
             </p>
 
             <a href="blog-2.html" class="my-blog-read-more">
@@ -326,8 +314,6 @@
 
     </article>
 
-
-    <!-- POST 5 -->
 
     <article class="my-blog-card historical">
 
@@ -353,7 +339,7 @@
             </div>
 
             <p class="my-blog-summary">
-                Our communist movement faces an important question: considering the low level of our organizations, our continuous lack of practical and ideological unity, the scattered characteristic of our forces, etc., where must we dedicate our efforts?
+                Our communist movement faces an important question.
             </p>
 
             <a href="blog-3.html" class="my-blog-read-more">
@@ -364,8 +350,6 @@
 
     </article>
 
-
-    <!-- POST 6 -->
 
     <article class="my-blog-card theoretical polemical">
 
@@ -391,7 +375,7 @@
             </div>
 
             <p class="my-blog-summary">
-                For us new Maoists today, it is squarely in the inundation to a hodgepodge of ineffective and never-ending radical activism where our road begins. A disdain for pragmatism, electoralism, and social-reformism grows, propelling us into a serious study of serious things.
+                For us new Maoists today, it is squarely in the inundation to a hodgepodge of ineffective and never-ending radical activism where our road begins.
             </p>
 
             <a href="blog-4.html" class="my-blog-read-more">
@@ -451,40 +435,35 @@
   <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const filterButtons = document.querySelectorAll("#blog-filter li");
-    const articles = document.querySelectorAll(".my-blog-card");
+    const buttons = document.querySelectorAll("#blog-filter li");
+    const posts = document.querySelectorAll("#blog-grid .my-blog-card");
 
-    filterButtons.forEach(function (button) {
+    buttons.forEach(function (button) {
 
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
+        button.addEventListener("click", function () {
 
-            // Remove active state from all buttons
-            filterButtons.forEach(function (btn) {
+            const category = this.getAttribute("data-filter");
+
+            buttons.forEach(function (btn) {
                 btn.classList.remove("active");
             });
 
-            // Make clicked button active
             this.classList.add("active");
 
-            const filter = this.getAttribute("data-filter");
+            posts.forEach(function (post) {
 
-            articles.forEach(function (article) {
-
-                if (filter === "*") {
-                    article.style.display = "";
+                if (category === "all") {
+                    post.style.display = "block";
+                } 
+                else if (post.classList.contains(category)) {
+                    post.style.display = "block";
                 } 
                 else {
-                    const category = filter.substring(1);
-
-                    if (article.classList.contains(category)) {
-                        article.style.display = "";
-                    } else {
-                        article.style.display = "none";
-                    }
+                    post.style.display = "none";
                 }
 
             });
+
         });
 
     });
