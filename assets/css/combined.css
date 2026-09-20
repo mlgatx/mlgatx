@@ -604,128 +604,141 @@
 @font-face {
     font-family: "Bernoru-BlackUltraExpanded";
     src: url("../fonts/Bernoru-BlackUltraExpanded.woff2") format("woff2");
-    font-weight: normal;
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
-/* ==========================================
-   LARGE RED ONWARD! MASTHEAD
-   ========================================== */
+/* =====================================================
+   ONWARD! — LARGE CENTERED RED MASTHEAD
+   ===================================================== */
 
 .blog-page-header {
-    width: 100%;
-    margin: 25px auto 45px auto;
-    padding: 30px 0 28px 0;
+    display: block !important;
+    width: 100% !important;
 
-    text-align: center;
+    margin: 30px 0 50px 0 !important;
+    padding: 25px 0 30px 0 !important;
 
-    border-bottom: 5px solid #111111;
+    text-align: center !important;
 
-    box-sizing: border-box;
+    border-bottom: 5px solid #111111 !important;
+
+    box-sizing: border-box !important;
 }
 
 
-/* HUGE ONWARD! */
+/* THE ONWARD! TEXT */
 
-.blog-page-header h1 {
-    width: 100%;
+.blog-page-header h1,
+.blog-page-header h1.nk-post-title {
+    display: block !important;
+
+    width: 100% !important;
 
     margin: 0 !important;
     padding: 0 !important;
 
-    font-family: "Bernoru BlackUltraExpanded", Impact, sans-serif !important;
+    font-family: "Bernoru Condensed", Impact, sans-serif !important;
 
-    /*
-       Makes the word fill most of the available width.
-    */
-    font-size: clamp(100px, 15vw, 230px) !important;
+    font-size: 180px !important;
 
     font-weight: 900 !important;
 
-    line-height: 0.75 !important;
+    line-height: 0.8 !important;
 
-    /*
-       Slightly tightens the letters for a newspaper
-       masthead appearance.
-    */
-    letter-spacing: -4px !important;
+    letter-spacing: -5px !important;
 
-    color: #c40000 !important;
+    color: #c00000 !important;
 
     text-align: center !important;
 
     text-transform: uppercase !important;
 
     white-space: nowrap !important;
+
+    box-sizing: border-box !important;
 }
 
 
-/* BLOG label */
+/* BLOG */
 
 .blog-page-header::after {
-    content: "BLOG";
+    content: "BLOG" !important;
 
-    display: block;
+    display: block !important;
 
-    margin-top: 28px;
+    width: 100% !important;
 
-    font-family: "Rubik", Arial, sans-serif;
+    margin: 30px 0 0 0 !important;
+    padding: 0 !important;
 
-    font-size: 14px;
+    font-family: "Rubik", Arial, sans-serif !important;
 
-    font-weight: 600;
+    font-size: 14px !important;
 
-    letter-spacing: 8px;
+    font-weight: 600 !important;
 
-    color: #111111;
+    line-height: 1 !important;
 
-    text-align: center;
+    letter-spacing: 8px !important;
 
-    text-transform: uppercase;
+    color: #111111 !important;
+
+    text-align: center !important;
+
+    text-transform: uppercase !important;
 }
 
 
-/* ==========================================
-   TABLET
-   ========================================== */
+/* =====================================================
+   LARGE DESKTOP
+   ===================================================== */
 
-@media (max-width: 900px) {
+@media (min-width: 1200px) {
 
-    .blog-page-header h1 {
-        font-size: clamp(80px, 15vw, 150px) !important;
-        letter-spacing: -3px !important;
+    .blog-page-header h1,
+    .blog-page-header h1.nk-post-title {
+        font-size: 220px !important;
     }
 }
 
 
-/* ==========================================
-   MOBILE
-   ========================================== */
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .blog-page-header h1,
+    .blog-page-header h1.nk-post-title {
+        font-size: 130px !important;
+        letter-spacing: -4px !important;
+    }
+}
+
+
+/* =====================================================
+   PHONE
+   ===================================================== */
 
 @media (max-width: 600px) {
 
     .blog-page-header {
-        margin-top: 15px;
-        margin-bottom: 30px;
-
-        padding: 25px 0 20px 0;
-
-        border-bottom-width: 4px;
+        margin: 20px 0 35px 0 !important;
+        padding: 20px 0 22px 0 !important;
     }
 
-    .blog-page-header h1 {
-        font-size: 20vw !important;
+    .blog-page-header h1,
+    .blog-page-header h1.nk-post-title {
+        font-size: 75px !important;
         letter-spacing: -2px !important;
     }
 
     .blog-page-header::after {
-        margin-top: 20px;
-
-        font-size: 11px;
-
-        letter-spacing: 5px;
+        margin-top: 20px !important;
+        font-size: 11px !important;
+        letter-spacing: 5px !important;
     }
 }
-
 
