@@ -602,11 +602,11 @@
         padding: 20px !important;
     }
 @font-face {
-    font-family: "Bernoru Black Ultra Expanded";
-    src: url("../fonts/Bernoru-BlackUltraExpanded.woff2") format("woff2");
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Bernoru";
+  src: url("fonts/Bernoru-BlackUltraExpanded.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 
@@ -614,93 +614,60 @@
    ONWARD! MASTHEAD
    ===================================================== */
 
-#onward-masthead {
-    display: block !important;
-    width: 100% !important;
-    max-width: 1200px !important;
-
-    margin: 35px auto 45px auto !important;
-    padding: 25px 0 30px 0 !important;
-
-    text-align: center !important;
-    border-bottom: 5px solid #111111 !important;
-
-    box-sizing: border-box !important;
+* {
+  box-sizing: border-box;
 }
 
-#onward-title {
-    display: block !important;
-    width: 100% !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    font-family: "Bernoru Black Ultra Expanded", sans-serif !important;
-    font-size: 150px !important;
-    font-weight: 900 !important;
-
-    line-height: .8 !important;
-    letter-spacing: -4px !important;
-
-    color: #c00000 !important;
-
-    text-align: center !important;
-    text-transform: uppercase !important;
-
-    white-space: nowrap !important;
+body {
+  margin: 0;
+  background: white;
 }
 
-#onward-subtitle {
-    display: block !important;
+/* Main red container */
+.masthead {
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
 
-    margin: 30px auto 0 auto !important;
+  background: #ff0000;
 
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 14px !important;
-    font-weight: bold !important;
-    letter-spacing: 9px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    color: #111111 !important;
-    text-align: center !important;
+  padding: 4vw;
+  overflow: hidden;
 }
 
+/* Huge white masthead text */
+.masthead h1 {
+  margin: 0;
 
-/* Desktop */
+  color: #ffffff;
+  font-family: "Bernoru", sans-serif;
+  font-weight: 900;
 
-@media (min-width: 1200px) {
-    #onward-title {
-        font-size: 190px !important;
-    }
+  font-size: clamp(5rem, 17vw, 20rem);
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+
+  text-align: center;
+  white-space: nowrap;
 }
 
+/* Blog label */
+.masthead-label {
+  margin-top: 3vw;
 
-/* Tablet */
+  color: #ffffff;
+  font-family: "Bernoru", sans-serif;
+  font-weight: 900;
 
-@media (max-width: 900px) {
-    #onward-title {
-        font-size: 120px !important;
-    }
-}
+  font-size: clamp(1.5rem, 4vw, 4rem);
+  line-height: 1;
 
-
-/* Phone */
-
-@media (max-width: 600px) {
-    #onward-masthead {
-        margin: 20px auto 35px auto !important;
-        padding: 20px 0 25px 0 !important;
-    }
-
-    #onward-title {
-        font-size: 65px !important;
-        letter-spacing: -2px !important;
-    }
-
-    #onward-subtitle {
-        margin-top: 20px !important;
-        font-size: 11px !important;
-        letter-spacing: 6px !important;
-    }
+  text-align: center;
 }
 
 
