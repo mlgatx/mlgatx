@@ -608,17 +608,18 @@
    ONWARD! BLOG MASTHEAD
    ========================================== */
 
+
 @font-face {
     font-family: "Bernoru";
-    src: url("assets/fonts/Bernoru-BlackUltraExpanded.woff2") format("woff2");
+    src: url("../fonts/Bernoru-BlackUltraExpanded.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
 #onward-masthead {
-    width: 100%;
-    height: clamp(260px, 28vw, 380px);
+    width: 100vw;
+    min-height: 380px;
 
     background: #ff0000;
 
@@ -627,22 +628,23 @@
     justify-content: center;
     align-items: center;
 
-    margin: 0;
-    padding: 20px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    padding: 40px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
 #onward-title {
     margin: 0;
-    padding: 0;
 
-    color: #fff;
-    font-family: "Bernoru";
+    color: #ffffff;
+    font-family: "Bernoru", sans-serif;
     font-weight: 900;
 
-    /* Keep the same wide Bernoru character proportions */
-    font-size: clamp(3rem, 8vw, 8rem);
+    /* This preserves the original Bernoru treatment */
+    font-size: clamp(4rem, 10vw, 10rem);
     line-height: 0.8;
     letter-spacing: -0.04em;
 
@@ -651,15 +653,53 @@
 }
 
 #onward-subtitle {
-    margin: clamp(15px, 2vw, 25px) 0 0;
-    padding: 0;
+    margin: 30px 0 0;
 
-    color: #fff;
-    font-family: "Bernoru";
+    color: #ffffff;
+    font-family: "Bernoru", sans-serif;
     font-weight: 900;
 
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 4vw, 4rem);
     line-height: 1;
 
     text-align: center;
+}
+
+
+/* TABLET */
+@media (max-width: 768px) {
+
+    #onward-masthead {
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    #onward-title {
+        font-size: 10vw;
+    }
+
+    #onward-subtitle {
+        font-size: 4.5vw;
+        margin-top: 20px;
+    }
+}
+
+
+/* PHONE */
+@media (max-width: 480px) {
+
+    #onward-masthead {
+        min-height: 240px;
+        padding: 20px 10px;
+    }
+
+    #onward-title {
+        font-size: 11vw;
+        letter-spacing: -0.04em;
+    }
+
+    #onward-subtitle {
+        font-size: 6vw;
+        margin-top: 15px;
+    }
 }
