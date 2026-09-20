@@ -702,3 +702,12 @@
         font-size: 19px !important;
     }
 }
+
+@font-face {
+    font-family: "Bernoru Condensed";
+    src: url("../fonts/Bernoru-Condensed.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
