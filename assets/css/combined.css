@@ -609,5 +609,123 @@
     font-display: swap;
 }
 
+/* ==========================================
+   LARGE RED ONWARD! MASTHEAD
+   ========================================== */
+
+.blog-page-header {
+    width: 100%;
+    margin: 25px auto 45px auto;
+    padding: 30px 0 28px 0;
+
+    text-align: center;
+
+    border-bottom: 5px solid #111111;
+
+    box-sizing: border-box;
+}
+
+
+/* HUGE ONWARD! */
+
+.blog-page-header h1 {
+    width: 100%;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: "Bernoru Condensed", Impact, sans-serif !important;
+
+    /*
+       Makes the word fill most of the available width.
+    */
+    font-size: clamp(100px, 15vw, 230px) !important;
+
+    font-weight: 900 !important;
+
+    line-height: 0.75 !important;
+
+    /*
+       Slightly tightens the letters for a newspaper
+       masthead appearance.
+    */
+    letter-spacing: -4px !important;
+
+    color: #c40000 !important;
+
+    text-align: center !important;
+
+    text-transform: uppercase !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* BLOG label */
+
+.blog-page-header::after {
+    content: "BLOG";
+
+    display: block;
+
+    margin-top: 28px;
+
+    font-family: "Rubik", Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 8px;
+
+    color: #111111;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .blog-page-header h1 {
+        font-size: clamp(80px, 15vw, 150px) !important;
+        letter-spacing: -3px !important;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .blog-page-header {
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+        padding: 25px 0 20px 0;
+
+        border-bottom-width: 4px;
+    }
+
+    .blog-page-header h1 {
+        font-size: 20vw !important;
+        letter-spacing: -2px !important;
+    }
+
+    .blog-page-header::after {
+        margin-top: 20px;
+
+        font-size: 11px;
+
+        letter-spacing: 5px;
+    }
+}
 
 
