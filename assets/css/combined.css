@@ -602,111 +602,11 @@
         padding: 20px !important;
     }
 @font-face {
-    font-family: "Bernoru Condensed";
-    src: url("../fonts/Bernoru-Condensed.woff2") format("woff2");
+    font-family: "Bernoru-BlackUltraExpanded";
+    src: url("../fonts/Bernoru-BlackUltraExpanded.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-  /* ==========================================
-   CENTERED ONWARD! EDITORIAL MASTHEAD
-   ========================================== */
-
-.blog-page-header {
-    width: 100%;
-    margin: 35px auto 45px auto;
-    padding: 0 0 22px 0;
-
-    text-align: center;
-
-    border-bottom: 4px solid #111111;
-}
-
-
-/* Main publication name */
-
-.blog-page-header h1 {
-    margin: 0 !important;
-    padding: 0 !important;
-
-    font-family: "Bernoru Condensed", Impact, sans-serif !important;
-
-    font-size: clamp(72px, 10vw, 150px) !important;
-    font-weight: 900 !important;
-
-    line-height: 0.82 !important;
-    letter-spacing: -2px !important;
-
-    color: #111111 !important;
-
-    text-align: center !important;
-    text-transform: uppercase !important;
-}
-
-
-/* BLOG label */
-
-.blog-page-header::after {
-    content: "BLOG";
-
-    display: block;
-
-    margin-top: 20px;
-
-    font-family: "Rubik", Arial, sans-serif;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    letter-spacing: 6px;
-
-    color: #111111;
-
-    text-align: center;
-
-    text-transform: uppercase;
-}
-
-
-/* ==========================================
-   MOBILE
-   ========================================== */
-
-@media (max-width: 700px) {
-
-    .blog-page-header {
-        margin-top: 20px;
-        margin-bottom: 30px;
-
-        padding-bottom: 16px;
-
-        border-bottom-width: 3px;
-    }
-
-    .blog-page-header h1 {
-        font-size: 70px !important;
-        letter-spacing: -1px !important;
-    }
-
-    .blog-page-header::after {
-        margin-top: 14px;
-        font-size: 11px;
-        letter-spacing: 4px;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .blog-page-header h1 {
-        font-size: 54px !important;
-    }
-}
-
-
-    .my-blog-title {
-        font-size: 19px !important;
-    }
 }
 
 
