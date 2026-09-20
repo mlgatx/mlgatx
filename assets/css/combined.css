@@ -610,46 +610,46 @@
 }
 
 /* =====================================================
-   ONWARD! — LARGE CENTERED RED MASTHEAD
+   ONWARD! MASTHEAD
    ===================================================== */
 
-.blog-page-header {
+#onward-masthead {
     display: block !important;
-    width: 100% !important;
 
-    margin: 30px 0 50px 0 !important;
-    padding: 25px 0 30px 0 !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+
+    margin: 40px auto 50px auto !important;
+    padding: 20px 0 30px 0 !important;
 
     text-align: center !important;
 
-    border-bottom: 5px solid #111111 !important;
+    border-bottom: 5px solid #111 !important;
 
     box-sizing: border-box !important;
 }
 
 
-/* THE ONWARD! TEXT */
+/* ONWARD! */
 
-.blog-page-header h1,
-.blog-page-header h1.nk-post-title {
+#onward-masthead #onward-title {
     display: block !important;
 
     width: 100% !important;
 
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 0 !important;
 
-    font-family: "Bernoru Condensed", Impact, sans-serif !important;
+    color: #c40000 !important;
+
+    font-family: "Bernoru BlackUltraExpanded", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif !important;
 
     font-size: 180px !important;
-
     font-weight: 900 !important;
 
     line-height: 0.8 !important;
 
-    letter-spacing: -5px !important;
-
-    color: #c00000 !important;
+    letter-spacing: -6px !important;
 
     text-align: center !important;
 
@@ -663,27 +663,24 @@
 
 /* BLOG */
 
-.blog-page-header::after {
-    content: "BLOG" !important;
-
+#onward-masthead #onward-subtitle {
     display: block !important;
 
     width: 100% !important;
 
-    margin: 30px 0 0 0 !important;
+    margin: 30px auto 0 auto !important;
     padding: 0 !important;
 
-    font-family: "Rubik", Arial, sans-serif !important;
+    color: #111111 !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
 
     font-size: 14px !important;
-
-    font-weight: 600 !important;
+    font-weight: bold !important;
 
     line-height: 1 !important;
 
-    letter-spacing: 8px !important;
-
-    color: #111111 !important;
+    letter-spacing: 10px !important;
 
     text-align: center !important;
 
@@ -691,54 +688,50 @@
 }
 
 
-/* =====================================================
-   LARGE DESKTOP
-   ===================================================== */
+/* LARGE DESKTOP */
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 
-    .blog-page-header h1,
-    .blog-page-header h1.nk-post-title {
+    #onward-masthead #onward-title {
         font-size: 220px !important;
     }
 }
 
 
-/* =====================================================
-   TABLET
-   ===================================================== */
+/* TABLET */
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
 
-    .blog-page-header h1,
-    .blog-page-header h1.nk-post-title {
+    #onward-masthead {
+        margin-top: 30px !important;
+    }
+
+    #onward-masthead #onward-title {
         font-size: 130px !important;
         letter-spacing: -4px !important;
     }
 }
 
 
-/* =====================================================
-   PHONE
-   ===================================================== */
+/* PHONE */
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
-    .blog-page-header {
-        margin: 20px 0 35px 0 !important;
-        padding: 20px 0 22px 0 !important;
+    #onward-masthead {
+        margin: 20px auto 35px auto !important;
+        padding-bottom: 20px !important;
     }
 
-    .blog-page-header h1,
-    .blog-page-header h1.nk-post-title {
-        font-size: 75px !important;
+    #onward-masthead #onward-title {
+        font-size: 72px !important;
         letter-spacing: -2px !important;
     }
 
-    .blog-page-header::after {
+    #onward-masthead #onward-subtitle {
         margin-top: 20px !important;
         font-size: 11px !important;
-        letter-spacing: 5px !important;
+        letter-spacing: 6px !important;
     }
 }
+
 
