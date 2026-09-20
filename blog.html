@@ -448,6 +448,49 @@
     <!-- START: Scripts -->
 
 <script src="assets/js/combined.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filterButtons = document.querySelectorAll("#blog-filter li");
+    const articles = document.querySelectorAll(".my-blog-card");
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Remove active state from all buttons
+            filterButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            // Make clicked button active
+            this.classList.add("active");
+
+            const filter = this.getAttribute("data-filter");
+
+            articles.forEach(function (article) {
+
+                if (filter === "*") {
+                    article.style.display = "";
+                } 
+                else {
+                    const category = filter.substring(1);
+
+                    if (article.classList.contains(category)) {
+                        article.style.display = "";
+                    } else {
+                        article.style.display = "none";
+                    }
+                }
+
+            });
+        });
+
+    });
+
+});
+</script>
     
     <!-- END: Scripts -->
 
