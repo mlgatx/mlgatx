@@ -432,43 +432,88 @@
     <!-- START: Scripts -->
 
 <script src="assets/js/combined.js"></script>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
+ <script>
+(function () {
 
-    const buttons = document.querySelectorAll("#blog-filter li");
-    const posts = document.querySelectorAll("#blog-grid .my-blog-card");
+    function initBlogFilter() {
 
-    buttons.forEach(function (button) {
+        var buttons = document.querySelectorAll("#blog-filter li");
+        var posts = document.querySelectorAll("#blog-grid .my-blog-card");
 
-        button.addEventListener("click", function () {
+        console.log("BLOG FILTER:", buttons.length, "buttons,", posts.length, "posts");
 
-            const category = this.getAttribute("data-filter");
+        if (!buttons.length || !posts.length) {
+            console.error("Blog filter could not find the buttons or posts.");
+            return;
+        }
 
-            buttons.forEach(function (btn) {
-                btn.classList.remove("active");
-            });
+        buttons.forEach(function (button) {
 
-            this.classList.add("active");
+            button.addEventListener("click", function (event) {
 
-            posts.forEach(function (post) {
+                event.preventDefault();
+                event.stopPropagation();
 
-                if (category === "all") {
-                    post.style.display = "block";
-                } 
-                else if (post.classList.contains(category)) {
-                    post.style.display = "block";
-                } 
-                else {
-                    post.style.display = "none";
-                }
+                var category = button.getAttribute("data-filter");
+
+                console.log("FILTER CLICKED:", category);
+
+                buttons.forEach(function (otherButton) {
+                    otherButton.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                posts.forEach(function (post) {
+
+                    if (category === "all") {
+
+                        post.style.setProperty(
+                            "display",
+                            "block",
+                            "important"
+                        );
+
+                    } else if (post.classList.contains(category)) {
+
+                        post.style.setProperty(
+                            "display",
+                            "block",
+                            "important"
+                        );
+
+                    } else {
+
+                        post.style.setProperty(
+                            "display",
+                            "none",
+                            "important"
+                        );
+
+                    }
+
+                });
 
             });
 
         });
 
-    });
+    }
 
-});
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initBlogFilter
+        );
+
+    } else {
+
+        initBlogFilter();
+
+    }
+
+})();
 </script>
     
     <!-- END: Scripts -->
