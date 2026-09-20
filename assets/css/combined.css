@@ -604,9 +604,9 @@
 
 
 
-/* =====================================================
-   ONWARD! MASTHEAD
-   ===================================================== */
+/* ==========================================
+   ONWARD! BLOG MASTHEAD
+   ========================================== */
 
 @font-face {
     font-family: "Bernoru";
@@ -618,7 +618,8 @@
 
 #onward-masthead {
     width: 100vw;
-    min-height: 80vh;
+    min-height: 90vh;
+
     background: #ff0000;
 
     display: flex;
@@ -631,16 +632,17 @@
 
     padding: 5vw;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 #onward-title {
     margin: 0;
-    color: #fff;
 
+    color: #fff;
     font-family: "Bernoru", sans-serif;
     font-weight: 900;
 
-    font-size: clamp(5rem, 18vw, 20rem);
+    font-size: clamp(5rem, 17vw, 20rem);
     line-height: 0.8;
     letter-spacing: -0.04em;
 
@@ -649,9 +651,9 @@
 }
 
 #onward-subtitle {
-    margin-top: 3rem;
-    color: #fff;
+    margin: 3rem 0 0;
 
+    color: #fff;
     font-family: "Bernoru", sans-serif;
     font-weight: 900;
 
@@ -660,8 +662,3 @@
 
     text-align: center;
 }
-
-  text-align: center;
-}
-
-
