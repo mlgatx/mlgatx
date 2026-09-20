@@ -602,12 +602,13 @@
         padding: 20px !important;
     }
 @font-face {
-    font-family: "Bernoru-BlackUltraExpanded";
+    font-family: "Bernoru Black Ultra Expanded";
     src: url("../fonts/Bernoru-BlackUltraExpanded.woff2") format("woff2");
-    font-weight: 100 900;
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
+
 
 /* =====================================================
    ONWARD! MASTHEAD
@@ -615,119 +616,87 @@
 
 #onward-masthead {
     display: block !important;
-
     width: 100% !important;
     max-width: 1200px !important;
 
-    margin: 40px auto 50px auto !important;
-    padding: 20px 0 30px 0 !important;
+    margin: 35px auto 45px auto !important;
+    padding: 25px 0 30px 0 !important;
 
     text-align: center !important;
-
-    border-bottom: 5px solid #111 !important;
+    border-bottom: 5px solid #111111 !important;
 
     box-sizing: border-box !important;
 }
 
-
-/* ONWARD! */
-
-#onward-masthead #onward-title {
+#onward-title {
     display: block !important;
-
     width: 100% !important;
 
-    margin: 0 auto !important;
+    margin: 0 !important;
     padding: 0 !important;
 
-    color: #c40000 !important;
-
-    font-family: "Bernoru BlackUltraExpanded", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif !important;
-
-    font-size: 180px !important;
+    font-family: "Bernoru Black Ultra Expanded", sans-serif !important;
+    font-size: 150px !important;
     font-weight: 900 !important;
 
-    line-height: 0.8 !important;
+    line-height: .8 !important;
+    letter-spacing: -4px !important;
 
-    letter-spacing: -6px !important;
+    color: #c00000 !important;
 
     text-align: center !important;
-
     text-transform: uppercase !important;
 
     white-space: nowrap !important;
-
-    box-sizing: border-box !important;
 }
 
-
-/* BLOG */
-
-#onward-masthead #onward-subtitle {
+#onward-subtitle {
     display: block !important;
 
-    width: 100% !important;
-
     margin: 30px auto 0 auto !important;
-    padding: 0 !important;
-
-    color: #111111 !important;
 
     font-family: Arial, Helvetica, sans-serif !important;
-
     font-size: 14px !important;
     font-weight: bold !important;
+    letter-spacing: 9px !important;
 
-    line-height: 1 !important;
-
-    letter-spacing: 10px !important;
-
+    color: #111111 !important;
     text-align: center !important;
-
-    text-transform: uppercase !important;
 }
 
 
-/* LARGE DESKTOP */
+/* Desktop */
 
-@media screen and (min-width: 1200px) {
-
-    #onward-masthead #onward-title {
-        font-size: 220px !important;
+@media (min-width: 1200px) {
+    #onward-title {
+        font-size: 190px !important;
     }
 }
 
 
-/* TABLET */
+/* Tablet */
 
-@media screen and (max-width: 900px) {
-
-    #onward-masthead {
-        margin-top: 30px !important;
-    }
-
-    #onward-masthead #onward-title {
-        font-size: 130px !important;
-        letter-spacing: -4px !important;
+@media (max-width: 900px) {
+    #onward-title {
+        font-size: 120px !important;
     }
 }
 
 
-/* PHONE */
+/* Phone */
 
-@media screen and (max-width: 600px) {
-
+@media (max-width: 600px) {
     #onward-masthead {
         margin: 20px auto 35px auto !important;
-        padding-bottom: 20px !important;
+        padding: 20px 0 25px 0 !important;
     }
 
-    #onward-masthead #onward-title {
-        font-size: 72px !important;
+    #onward-title {
+        font-size: 65px !important;
         letter-spacing: -2px !important;
     }
 
-    #onward-masthead #onward-subtitle {
+    #onward-subtitle {
         margin-top: 20px !important;
         font-size: 11px !important;
         letter-spacing: 6px !important;
