@@ -703,3 +703,59 @@
         margin-top: 15px;
     }
 }
+
+
+
+/* ONWARD! BLOG MASTHEAD */
+#onward-masthead {
+    background-color: #291c1c !important;
+    color: #eb341b !important;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 30px 20px !important;
+    margin: 0 auto 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Main ONWARD! title */
+#onward-title {
+    color: #eb341b !important;
+    font-size: 48px !important;
+    line-height: 1.1;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+}
+
+/* BLOG subtitle */
+#onward-subtitle {
+    color: #eb341b !important;
+    font-size: 16px !important;
+    line-height: 1.4;
+    letter-spacing: 5px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* Smaller header on mobile */
+@media (max-width: 768px) {
+    #onward-masthead {
+        padding: 22px 15px !important;
+    }
+
+    #onward-title {
+        font-size: 36px !important;
+    }
+
+    #onward-subtitle {
+        font-size: 13px !important;
+        letter-spacing: 4px;
+    }
+}
