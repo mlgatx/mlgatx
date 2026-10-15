@@ -713,7 +713,7 @@ text-align: center;
 
 /* ONWARD! BLOG MASTHEAD */
 #onward-masthead {
-    background-color: #FFFFFF
+    background-color: #ffffff !important;
     color: #eb341b !important;
 
     width: 100%;
